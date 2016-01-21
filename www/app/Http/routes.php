@@ -15,6 +15,7 @@ $app->get('/', [
     'uses' => 'GameController@index'
 ]);
 
+// should be changed to post after dev
 $app->get('/create-game/{name}', [
     'uses' => 'GameController@createGame'
 ]);
@@ -27,5 +28,8 @@ $app->get('/game/captain/{name}', [
     'uses' => 'GameController@showGameCaptain'
 ]);
 
+$app->post('/discover-word', [
+    'uses' => 'GameController@discoverWord'
+]);
 
 

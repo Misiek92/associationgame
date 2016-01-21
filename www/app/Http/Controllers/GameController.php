@@ -42,8 +42,22 @@ class GameController extends Controller
     public function showGame($name)
     {
         $game = Game::where('name', $name)->first();
+        //dd($game->distribution->words);
         $view = view('board')->with('name', $name)->with('words', json_decode($game->distribution->words, true));
         return $view;
     }
     
+    public function discoverWord()
+    {
+        $game = Game::where('name', $_POST['game'])->first();
+        $words = json_decode($game->distribution->words, false);
+        for ($i = 0; $i < count($words); $i++) {
+            if ($words[$i]->word == $_POST['word']) {
+                $words[$i]->discovered = true;
+            }
+        }
+        $dist = Distribution::where('id', $game->distribution_id)->first();
+        $dist->words = json_encode($words);
+        $dist->save();
+    }
 }

@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
-        <div class='side'>Panel</div>
+        <div class='side'><span class='glyphicon glyphicon-home'></span></div>
         <div class='content'>
             @yield('content')
         </div>

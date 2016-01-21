@@ -11,27 +11,32 @@ body, html {
 .side {
     display: inline-block;
     position: relative;
-    width: 4%;
+    width: 5%;
     height: 100%;
     overflow: hidden;
     margin: 0;
     padding: 0;
     vertical-align: top;
     background-color: #474747;
-    padding: 5px;
+    padding: 20px 8px;
     color: #cfcfcf;
-    border-right: 3px dashed #b3b3b3;
+    outline: 1px dashed #808080;
+    outline-offset: -5px;
+    text-align: center;
+    font-size: 36px;
 }
 
 .content {
     font-family: 'Bitter', Tahoma;
     display: inline-block;
     position: relative;
-    width: 95%;
+    width: 94.4%;
     height: 100%;
     margin: 0;
     padding: 0.3%;
-    text-align: right;
+    text-align: center;
+    outline: 1px dashed #c0c0c0;
+    outline-offset: -5px;
 }
 
 .container {
@@ -69,7 +74,6 @@ body, html {
 }
 
 .card .front {
-    overflow: hidden;
     background: #f4f4f4;
     -webkit-border-radius: 10px; 
     -moz-border-radius: 10px; 
@@ -81,7 +85,7 @@ body, html {
 }
 
 .card .front:hover {
-    font-size: 48px;
+    font-size: 42px;
     transition: all .2s;
     background-color: #ffffff;
 }
@@ -92,10 +96,12 @@ body, html {
     border-radius: 10px;
     transform: rotateY( 180deg );
     color: #474747;
+    border-bottom: 2px solid #cdcdcd;
 }
 
 .color-0 {
     background-color: #ff9494;
+    
 }
 
 .color-1 {
