@@ -1,0 +1,28 @@
+{
+  "name": "associationgame",
+  "homepage": "https://github.com/Misiek92/associationgame",
+  "authors": [
+    "Mateusz <meteorek@gmail.com>"
+  ],
+  "description": "board game",
+  "main": "",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "bootstrap": "~3.3.6"
+  }
+}
