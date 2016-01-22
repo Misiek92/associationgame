@@ -16,7 +16,7 @@ $app->get('/', [
 ]);
 
 // should be changed to post after dev
-$app->get('/create-game/{name}', [
+$app->post('/create-game/{name}', [
     'uses' => 'GameController@createGame'
 ]);
 
@@ -24,12 +24,25 @@ $app->get('/game/{name}', [
     'uses' => 'GameController@showGame'
 ]);
 
-$app->get('/game/captain/{name}', [
+$app->get('/game/{name}/captain', [
     'uses' => 'GameController@showGameCaptain'
+]);
+
+$app->post('/game/add-point', [
+    'uses' => 'GameController@addPoints'
 ]);
 
 $app->post('/discover-word', [
     'uses' => 'GameController@discoverWord'
+]);
+
+$app->get('/distribution/game/{name}', [
+    'uses' => 'GameController@getDistributionForGame'
+]);
+
+$app->post('/game/{name}/new-distribution', [
+    'as' => 'newDistribution',
+    'uses' => 'GameController@newDistribution'
 ]);
 
 
